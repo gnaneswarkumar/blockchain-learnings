@@ -1,11 +1,12 @@
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const Web3 = require("web3");
 const { interface, bytecode } = require("./compile");
+const {your_own_phrase, your_own_endpoint } = require("./config");
 
 const provider = new HDWalletProvider(
-  "<your own phrase>",
+  your_own_phrase,
   // remember to change this to your own phrase!
-  "<your own endpoint>"
+  your_own_endpoint
   // remember to change this to your own endpoint!
 );
 const web3 = new Web3(provider);
